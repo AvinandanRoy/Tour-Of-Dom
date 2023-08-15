@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        #fruits-title{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, officia.</p>
+    </section>
+
+    <section>
+        <h1>My family member</h1>
+        <ul>
+            <li>Avinandan</li>
+            <li>Pranta</li>
+            <li>Krishna</li>
+            <li>Lipi</li>
+        </ul>
+    </section>
+
+    <section>
+        <h1 id="fruits-title">Fruits I likes</h1>
+        <ul>
+            <li class="favourite-fruits">Apple</li>
+            <li>Banana</li>
+            <li>Water-Melon</li>
+            <li>Pine-Apple</li>
+        </ul>
+    </section>
+
+    <section>
+        <h1 id="places-title">Place that i like to visit</h1>
+        <ul>
+            <li class="important-places">Sundarban</li>
+            <li class="important-places">Coxs-Bazar</li>
+            <li class="important-places">Sajek-vali</li>
+            <li class="important-places" >Bandarban</li>
+        </ul>
+    </section>
+
+
+    <!-- JS element -->
+    <script>
+        const places = document.getElementsByClassName("important-places");
+        // console.log(places);
+
+        for(const place of places ){
+            console.log(place.innerText);
+        }
+
+        const fruitsTitle = document.getElementById("fruits-title");
+
+        fruitsTitle.innerText = "Fruits title changed by java-Script";
+
+        const favourite = document.getElementsByClassName("favourite-fruits");
+        console.log(favourite);
+        for(const result of favourite){
+            console.log(result.innerText);
+        }
+    </script>
+</body>
+</html>
