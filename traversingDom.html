@@ -9,6 +9,10 @@
         #fruits-title{
             color: blueviolet;
         }
+
+        .my-family li{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -17,13 +21,23 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, officia.</p>
     </section>
 
-    <section>
-        <h1>My family member</h1>
+    <section class="my-family">
+        <h1 >My family member</h1>
         <ul>
             <li>Avinandan</li>
             <li>Pranta</li>
             <li>Krishna</li>
             <li>Lipi</li>
+        </ul>
+    </section>
+
+    <section class="my-educational-background">
+        <h1 >My school college and university</h1>
+        <ul>
+            <li>71 No Kundoshi GOVT Primary School</li>
+            <li>Lohagara Pilot High School</li>
+            <li>Cantonment College Jashore</li>
+            <li>Daffodil Interational University</li>
         </ul>
     </section>
 
@@ -50,8 +64,10 @@
 
     <!-- JS element -->
     <script>
+
+        // getElementById or getElementByClassName 
         const places = document.getElementsByClassName("important-places");
-        // console.log(places);
+        console.log(places);
 
         for(const place of places ){
             console.log(place.innerText);
@@ -65,6 +81,22 @@
         console.log(favourite);
         for(const result of favourite){
             console.log(result.innerText);
+        }
+
+        // querySelectorAll----> for all 
+        // querySelector ----> for first
+        const myFamily = document.querySelectorAll(".my-family li");
+
+        console.log(myFamily);
+        for(const li of myFamily){
+            console.log(li.innerText);
+        }
+        
+        const myEducationalBackground = document.querySelectorAll('.my-educational-background li')
+        console.log(myEducationalBackground);
+
+        for(const educationalBackground of myEducationalBackground){
+            console.log(educationalBackground.innerText);
         }
     </script>
 </body>
